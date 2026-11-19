@@ -1,0 +1,7 @@
+{
+  "name": "usage-limits",
+  "version": "0.1.0",
+  "description": "Shows your Claude plan's 5-hour session and weekly usage % above the message box, plus a /limits side pane",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

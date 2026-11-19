@@ -1,0 +1,6 @@
+{
+  "name": "usage-limit",
+  "description": "Shows your Claude plan's 5-hour session and weekly usage % above the message box",
+  "owner": { "name": "YOUR-GITHUB-USERNAME" },
+  "plugins": [{ "name": "usage-limits", "source": "./" }]
+}
