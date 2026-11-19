@@ -55,7 +55,6 @@ export const register: Register = on => {
       name: 'limits',
       description: 'Open the usage limits pane',
     })
-    void $.ui.open({ id: PANE, title: TITLE })
 
     try {
       const usage = await $.session.usage()
@@ -74,14 +73,6 @@ export const register: Register = on => {
         ? 'Usage limits pane opened.'
         : `Usage limits pane could not be shown: ${opened.reason}`,
     }
-  })
-
-  // Re-open whenever a surface (the desktop window) attaches, so the pane
-  // shows up by itself without typing /limits.
-  on('session.attach', async ($, e, next) => {
-    const attached = await next(e)
-    void $.ui.open({ id: PANE, title: TITLE })
-    return attached
   })
 
   on('session.measure', async ($, e, next) => {
